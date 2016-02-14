@@ -4,26 +4,26 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>pt.devhub.a2e</groupId>
-        <artifactId>a2e</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+	<parent>
+		<groupId>pt.devhub.a2e</groupId>
+		<artifactId>a2e</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
-    <artifactId>a2e-frontend</artifactId>
-    <name>A2E - Front-end</name>
+	<artifactId>a2e-frontend</artifactId>
+	<name>A2E - Front-end</name>
 
-    <packaging>war</packaging>
+	<packaging>war</packaging>
 
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <configuration>
-                    <warName>angular2elastic</warName>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warName>angular2elastic</warName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -12,6 +12,12 @@ var a2eApp = angular.module('a2eApp', [ 'ui.bootstrap' ]);
 /**
  * Main controller.
  */
-a2eApp.controller('MainController', function() {
+a2eApp.controller('MainController', function($scope) {
+	$scope.name = '';
+	$scope.submitted = '';
+	$scope.answered = '';
 
+	$scope.sendToServer = function() {
+		console.log("Sending to server...");
+	};
 });

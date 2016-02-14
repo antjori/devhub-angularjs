@@ -2,20 +2,27 @@
 <html lang="en" ng-app="a2eApp">
 <!-- JS dependencies -->
 <script type="text/javascript"
-    src="lib/angularjs/1.5.0-rc.1/angular.min.js"></script>
+	src="lib/angularjs/1.5.0-rc.1/angular.min.js"></script>
 <script type="text/javascript"
-    src="lib/uibootstrap/1.1.1/ui-bootstrap-tpls.min.js"></script>
+	src="lib/uibootstrap/1.1.1/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="js/a2eApp.js"></script>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <!-- CSS dependencies -->
 <link rel="stylesheet" type="text/css" href="css/a2eStyles.css"
-    media="screen">
+	media="screen">
 <link rel="stylesheet" type="text/css"
-    href="lib/bootstrap/3.3.6/css/bootstrap-theme.min.css" media="screen">
+	href="lib/bootstrap/3.3.6/css/bootstrap-theme.min.css" media="screen">
 <link rel="stylesheet" type="text/css"
-    href="lib/bootstrap/3.3.6/css/bootstrap.min.css" media="screen">
+	href="lib/bootstrap/3.3.6/css/bootstrap.min.css" media="screen">
 <title>Angular2Elastic</title>
 </head>
 <body ng-controller="MainController">
+	<p>
+		Input: <input type="text" ng-model="name"><button ng-click="sendToServer()">Send</button>
+	</p>
+	<p>You wrote: {{ name }}</p>
+	<p>You submitted: <b>{{ submitted }}</b>
+	<p>Server answered: <i>{{ answered }}</i>
 </body>
 </html>
