@@ -15,8 +15,40 @@
         ]]>
     </description>
 
-    <modules>
-        <module>a2e-frontend</module>
-        <module>a2e-backend</module>
-    </modules>
+	<modules>
+		<module>a2e-frontend</module>
+		<module>a2e-backend</module>
+	</modules>
+
+	<!-- Properties -->
+	<properties>
+		<!-- encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Java version -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<!-- plugin versions -->
+		<maven-war-plugin.version>2.6</maven-war-plugin.version>
+	</properties>
+
+	<inceptionYear>2016</inceptionYear>
+
+	<!-- Plugin Management -->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- war plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${maven-war-plugin.version}</version>
+					<configuration>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
