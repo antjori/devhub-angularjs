@@ -31,9 +31,36 @@
 
 		<!-- plugin versions -->
 		<maven-war-plugin.version>2.6</maven-war-plugin.version>
+
+		<!-- dependency versions -->
+		<javaee-api.version>7.0</javaee-api.version>
 	</properties>
 
 	<inceptionYear>2016</inceptionYear>
+
+	<!-- Dependency Management -->
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- SPECIFIC DEPENDENCIES -->
+
+			<!-- Java EE -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${javaee-api.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- common -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 	<!-- Plugin Management -->
 	<build>
@@ -51,4 +78,5 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
 </project>

@@ -14,5 +14,4 @@
 	<artifactId>a2e-backend</artifactId>
 	<name>A2E - Back-end</name>
 
-    <packaging>pom</packaging>
 </project>
