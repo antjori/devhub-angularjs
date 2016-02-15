@@ -34,6 +34,7 @@
 
 		<!-- dependency versions -->
 		<javaee-api.version>7.0</javaee-api.version>
+		<es.version>2.2.0</es.version>
 	</properties>
 
 	<inceptionYear>2016</inceptionYear>
@@ -49,6 +50,15 @@
 				<groupId>javax</groupId>
 				<artifactId>javaee-api</artifactId>
 				<version>${javaee-api.version}</version>
+			</dependency>
+
+			<!-- OTHER DEPENDENCIES -->
+
+            <!-- Elastic -->
+			<dependency>
+				<groupId>org.elasticsearch</groupId>
+				<artifactId>elasticsearch</artifactId>
+				<version>${es.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

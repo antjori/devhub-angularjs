@@ -14,4 +14,10 @@
 	<artifactId>a2e-backend</artifactId>
 	<name>A2E - Back-end</name>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+		</dependency>
+	</dependencies>
 </project>
