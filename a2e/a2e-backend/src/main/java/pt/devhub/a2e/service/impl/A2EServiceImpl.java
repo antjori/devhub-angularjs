@@ -10,7 +10,7 @@ import javax.ws.rs.core.Response;
 
 import pt.devhub.a2e.service.A2EService;
 
-@Path("/a2e")
+@Path("/service")
 public class A2EServiceImpl implements A2EService {
 
 	@GET

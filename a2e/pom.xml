@@ -16,8 +16,9 @@
     </description>
 
 	<modules>
-		<module>a2e-frontend</module>
 		<module>a2e-backend</module>
+		<module>a2e-ear</module>
+		<module>a2e-frontend</module>
 	</modules>
 
 	<!-- Properties -->
@@ -34,7 +35,9 @@
 
 		<!-- dependency versions -->
 		<javaee-api.version>7.0</javaee-api.version>
+
 		<es.version>2.2.0</es.version>
+		<json.version>20160212</json.version>
 	</properties>
 
 	<inceptionYear>2016</inceptionYear>
@@ -54,11 +57,18 @@
 
 			<!-- OTHER DEPENDENCIES -->
 
-            <!-- Elastic -->
+			<!-- elastic -->
 			<dependency>
 				<groupId>org.elasticsearch</groupId>
 				<artifactId>elasticsearch</artifactId>
 				<version>${es.version}</version>
+			</dependency>
+
+			<!-- json -->
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>json</artifactId>
+				<version>${json.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
