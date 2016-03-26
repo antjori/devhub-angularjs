@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>pt.devhub.a2e</groupId>
+		<groupId>pt.devhub.javaee.a2e</groupId>
 		<artifactId>a2e</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
@@ -18,14 +18,15 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>pt.devhub.a2e</groupId>
+			<groupId>pt.devhub.javaee.a2e</groupId>
 			<artifactId>a2e-backend</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-            <groupId>pt.devhub.a2e</groupId>
-            <artifactId>a2efrontend</artifactId>
+            <groupId>pt.devhub.javaee.a2e</groupId>
+            <artifactId>a2e-frontend</artifactId>
             <version>${project.version}</version>
+            <type>war</type>
         </dependency>
 	</dependencies>
 </project>
