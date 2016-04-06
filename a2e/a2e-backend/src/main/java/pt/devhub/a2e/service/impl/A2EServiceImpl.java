@@ -1,5 +1,6 @@
 package pt.devhub.a2e.service.impl;
 
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -7,10 +8,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import org.json.JSONObject;
 
+import pt.devhub.a2e.database.ElasticConnector;
 import pt.devhub.a2e.service.A2EService;
 
 /**
@@ -19,6 +20,9 @@ import pt.devhub.a2e.service.A2EService;
  */
 @Path("/service")
 public class A2EServiceImpl implements A2EService {
+
+	@Inject
+	private ElasticConnector elasticConnector;
 
 	/**
 	 * {@inheritDoc}
@@ -32,7 +36,9 @@ public class A2EServiceImpl implements A2EService {
 
 		jsonObject.put("helloWorld", "Hello World!");
 
-		return Response.status(Status.OK).entity(jsonObject).build();
+		elasticConnector.connect();
+
+		return Response.ok(jsonObject).build();
 	}
 
 	/**
@@ -48,7 +54,7 @@ public class A2EServiceImpl implements A2EService {
 		jsonObject.put("helloWorld", "Hello World!");
 		jsonObject.put("Received from server", valueToPersist);
 
-		return Response.status(Status.OK).entity(jsonObject).build();
+		return Response.ok(jsonObject).build();
 	}
 
 }
