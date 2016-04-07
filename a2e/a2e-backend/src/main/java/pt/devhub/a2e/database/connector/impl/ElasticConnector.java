@@ -1,6 +1,8 @@
-package pt.devhub.a2e.database;
+package pt.devhub.a2e.database.connector.impl;
 
 import javax.annotation.PostConstruct;
+
+import pt.devhub.a2e.database.connector.NoSQLConnector;
 
 /**
  * The Elastic database connector.

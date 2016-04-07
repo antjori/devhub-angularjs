@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 
 import org.json.JSONObject;
 
-import pt.devhub.a2e.database.ElasticConnector;
+import pt.devhub.a2e.database.connector.impl.ElasticConnector;
 import pt.devhub.a2e.service.A2EService;
 
 /**
