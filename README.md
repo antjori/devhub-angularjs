@@ -1,2 +1,2 @@
 # atum
-The repository for all Javascript related projects.
+The repository for all AngularJS related projects.
