@@ -1,102 +1,107 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>pt.devhub.javaee.a2e</groupId>
-	<artifactId>a2e</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>pt.devhub.javaee.a2e</groupId>
+    <artifactId>a2e</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<name>A2E - AngularJS to Elastic</name>
+    <name>A2E - AngularJS to Elastic</name>
 
-	<description>
+    <description>
         <![CDATA[
             The project has the objective of being an example on how to communicate to a NoSQL database using a well known JS framework.
         ]]>
     </description>
 
-	<modules>
-		<module>a2e-backend</module>
-		<module>a2e-ear</module>
-		<module>a2e-frontend</module>
-	</modules>
+    <modules>
+        <module>a2e-backend</module>
+        <module>a2e-ear</module>
+        <module>a2e-frontend</module>
+    </modules>
 
-	<!-- Properties -->
-	<properties>
-		<!-- encoding -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <prerequisites>
+        <maven>3.3.9</maven>
+    </prerequisites>
 
-		<!-- Java version -->
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+    <!-- Properties -->
+    <properties>
+        <!-- encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<!-- plugin versions -->
-		<maven-war-plugin.version>2.6</maven-war-plugin.version>
+        <!-- Java version -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
 
-		<!-- dependency versions -->
-		<javaee-api.version>7.0</javaee-api.version>
+        <!-- plugin versions -->
+        <maven-war-plugin.version>2.6</maven-war-plugin.version>
 
-		<es.version>2.2.0</es.version>
-		<json.version>20160212</json.version>
-	</properties>
+        <!-- dependency versions -->
+        <javaee-api.version>7.0</javaee-api.version>
 
-	<inceptionYear>2016</inceptionYear>
+        <es.version>2.2.0</es.version>
+        <json.version>20160212</json.version>
+    </properties>
 
-	<!-- Dependency Management -->
-	<dependencyManagement>
-		<dependencies>
+    <inceptionYear>2016</inceptionYear>
 
-			<!-- SPECIFIC DEPENDENCIES -->
+    <!-- Dependency Management -->
+    <dependencyManagement>
+        <dependencies>
 
-			<!-- Java EE -->
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-api</artifactId>
-				<version>${javaee-api.version}</version>
-			</dependency>
+            <!-- SPECIFIC DEPENDENCIES -->
 
-			<!-- OTHER DEPENDENCIES -->
+            <!-- Java EE -->
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee-api.version}</version>
+            </dependency>
 
-			<!-- elastic -->
-			<dependency>
-				<groupId>org.elasticsearch</groupId>
-				<artifactId>elasticsearch</artifactId>
-				<version>${es.version}</version>
-			</dependency>
+            <!-- OTHER DEPENDENCIES -->
 
-			<!-- json -->
-			<dependency>
-				<groupId>org.json</groupId>
-				<artifactId>json</artifactId>
-				<version>${json.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+            <!-- elastic -->
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${es.version}</version>
+            </dependency>
 
-	<dependencies>
-		<!-- common -->
-		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
+            <!-- json -->
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${json.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-	<!-- Plugin Management -->
-	<build>
-		<pluginManagement>
-			<plugins>
-				<!-- war plugin -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-war-plugin</artifactId>
-					<version>${maven-war-plugin.version}</version>
-					<configuration>
-						<failOnMissingWebXml>false</failOnMissingWebXml>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+    <dependencies>
+        <!-- common -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Plugin Management -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- war plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war-plugin.version}</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
