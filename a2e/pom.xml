@@ -42,7 +42,7 @@
         <javaee-api.version>7.0</javaee-api.version>
 
         <es.version>6.8.17</es.version>
-        <json.version>20160212</json.version>
+        <json.version>20230227</json.version>
     </properties>
 
     <inceptionYear>2016</inceptionYear>
