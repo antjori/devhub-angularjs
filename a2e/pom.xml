@@ -41,7 +41,7 @@
         <!-- dependency versions -->
         <javaee-api.version>7.0</javaee-api.version>
 
-        <es.version>7.17.13</es.version>
+        <es.version>7.17.19</es.version>
         <json.version>20231013</json.version>
     </properties>
 
